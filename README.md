@@ -1,3 +1,11 @@
+# History
+
+## 24.03.27
+- Repository fork
+- yolov3-tiny-ours.cfg -> **yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg**
+
+---
+
 # PyTorch-Spiking-YOLOv3
 A PyTorch implementation of Spiking-YOLOv3, based on the PyTorch implementation of YOLOv3([ultralytics/yolov3](https://github.com/ultralytics/yolov3)), with support for Spiking-YOLOv3-Tiny at present. The whole Spiking-YOLOv3 will be supported soon.
 
