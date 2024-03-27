@@ -1,4 +1,5 @@
 import os
+import yaml
 
 import numpy as np
 
@@ -69,3 +70,12 @@ def parse_data_cfg(path):
         options[key.strip()] = val.strip()
 
     return options
+
+def parse_data_cfg_yaml(file_path):
+    with open(file_path, 'r') as stream:
+        try:
+            data = yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+            return None
+    return data
