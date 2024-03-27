@@ -14,6 +14,9 @@ apt-get upgrade -y
 apt-get install -y git libgl1-mesa-glx libglib2.0-0
 pip install tensorboard matplotlib apex pycocotools opencv-python
 ```
+- Using COCO2017 dataset
+> - Download link: [train](http://images.cocodataset.org/zips/train2017.zip), [validation](http://images.cocodataset.org/zips/val2017.zip), [test](http://images.cocodataset.org/zips/test2017.zip) and [labels](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/coco2017labels-segments.zip)
+- Update data cfg loader: load data from .yaml ([data/coco.yaml](data/coco.yaml))
 
 ---
 
