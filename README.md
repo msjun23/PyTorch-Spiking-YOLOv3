@@ -8,10 +8,12 @@ docker run -v /your/code/dir/PyTorch-Spiking-YOLOv3/:/root/code -v /data/dir/:/r
 ```
 - yolov3-tiny-ours.cfg -> **yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg**
 - Additional requirements
-> - tensorboard, matplotlib, apex, pycocotools
-> - opencv-python
->> - apt-get install -y libgl1-mesa-glx
->> - apt-get install -y libglib2.0-0
+```bash
+apt-get update
+apt-get upgrade -y
+apt-get install -y git libgl1-mesa-glx libglib2.0-0
+pip install tensorboard matplotlib apex pycocotools opencv-python
+```
 
 ---
 
