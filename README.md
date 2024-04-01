@@ -4,7 +4,7 @@
 - Repository fork
 - Create docker environment
 ```bash
-docker run -v /your/code/dir/PyTorch-Spiking-YOLOv3/:/root/code -v /data/dir/:/root/data -it --gpus=all --ipc=host --name yolov3_snn --shm-size=32g pytorch/pytorch:2.1.2-cuda12.1-cudnn8-devel
+docker run -v /your/code/dir/PyTorch-Spiking-YOLOv3/:/code -v /data/dir/:/data -it --gpus=all --ipc=host --name yolov3_snn --shm-size=32g pytorch/pytorch:2.1.2-cuda12.1-cudnn8-devel
 ```
 - yolov3-tiny-ours.cfg -> **yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg**
 - Additional requirements (at docker env.)
