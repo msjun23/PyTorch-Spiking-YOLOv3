@@ -78,10 +78,10 @@ def train(hyp):
 
     # Configure run
     init_seeds()
-    data_dict = parse_data_cfg(data)
+    data_dict = parse_data_cfg_yaml(file_path=data)
     train_path = data_dict['train']
-    test_path = data_dict['valid']
-    nc = 1 if opt.single_cls else int(data_dict['classes'])  # number of classes
+    test_path = data_dict['val']
+    nc = 1 if opt.single_cls else int(data_dict['nc'])  # number of classes
     hyp['cls'] *= nc / 80  # update coco-tuned hyp['cls'] to current dataset
 
     # Remove previous results
@@ -416,7 +416,7 @@ if __name__ == '__main__':
     best = wdir + f"best_{opt.name}.pt" if len(opt.name) > 0 else best  # best.pt maybe renamed
     results_file = f"results_{opt.name}.txt" if len(opt.name) > 0 else results_file  # results.txt maybe renamed
     opt.weights = last if opt.resume and not opt.weights else opt.weights
-    check_git_status()
+    # check_git_status()
     opt.cfg = check_file(opt.cfg)  # check file
     opt.data = check_file(opt.data)  # check file
     opt.img_size.extend([opt.img_size[-1]] * (3 - len(opt.img_size)))  # extend to 3 sizes (min, max, test)
