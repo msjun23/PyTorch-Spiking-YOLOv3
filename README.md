@@ -19,6 +19,12 @@ pip install numpy==1.23.0
 > - Download link: [train](http://images.cocodataset.org/zips/train2017.zip), [validation](http://images.cocodataset.org/zips/val2017.zip), [test](http://images.cocodataset.org/zips/test2017.zip) and [labels](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/coco2017labels-segments.zip)
 - Update data cfg loader: load data from .yaml ([data/coco.yaml](data/coco.yaml))
 - [train.py](/train.py) debugging
+- Bug when loading labels
+
+## 24.04.02
+- w/ COCO2017 have to be debugged more
+- Training, validation w/ COCO2014 code dubugging
+> - Download link: [train](http://images.cocodataset.org/zips/train2014.zip), [validation](http://images.cocodataset.org/zips/val2014.zip), [test](http://images.cocodataset.org/zips/test2014.zip) and [train/val annotations](http://images.cocodataset.org/annotations/annotations_trainval2014.zip), [test annotations](http://images.cocodataset.org/annotations/image_info_test2014.zip)
 ---
 
 # PyTorch-Spiking-YOLOv3
